@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  /* Official Hult Prize palette */
+  --color-heritage: #EC2088;
+  --color-heritage-dark: #c4196d;
+  --color-midnight: #292563;
+  --color-midnight-light: #332f7a;
+  --color-sky: #12B1E7;
+  --color-sun: #FDD40E;
+  --color-hp-black: #191919;
+  --color-white: #FFFFFF;
+
+  --font-sans: 'Figtree', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Figtree', system-ui, sans-serif;
+  background-color: #FFFFFF;
+  color: #191919;
+  margin: 0;
+}
