@@ -5,8 +5,8 @@ export default function Footer() {
         Hult Prize <span className="text-white/20 font-light">|</span> University College Dublin · Irish Nationals 2026
       </p>
       <p className="mt-2 font-light">
-        <a href="http://www.instagram.com/ucdie" target="_blank" rel="noopener noreferrer" className="hover:text-heritage transition-colors">
-          Organised by the UCD Investors and Entrepreneurs Society
+        Organised by the <a href="http://www.instagram.com/ucdie" target="_blank" rel="noopener noreferrer" className="hover:text-heritage transition-colors">
+          UCD Investors and Entrepreneurs Society
         </a>
         <span className="text-white/20 font-light"> | </span>
         <a href="mailto:sean.kelly7@ucdconnect.ie" className="hover:text-heritage transition-colors">

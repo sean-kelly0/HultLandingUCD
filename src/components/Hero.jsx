@@ -1,12 +1,5 @@
 import heroBg from '../assets/hero.jpg'
 
-const gradientText = {
-  background: 'linear-gradient(90deg, #EC2088, #12B1E7)',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  backgroundClip: 'text',
-}
-
 export default function Hero() {
   return (
     <section
@@ -34,7 +27,7 @@ export default function Hero() {
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-white leading-tight mb-6">
           Hult Prize
           <br />
-          <span style={gradientText}>@ UCD</span>
+          <span className="text-heritage">@ UCD</span>
         </h1>
 
         <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
@@ -69,7 +62,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="https://www.eventbrite.com/e/hult-prize-irish-national-competition-tickets-1984974510194?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl"
+            href="https://luma.com/01aep11q"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-heritage hover:bg-heritage-dark text-white font-black px-8 py-3.5 rounded-full text-base transition-colors shadow-lg"
