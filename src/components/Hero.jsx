@@ -27,7 +27,7 @@ export default function Hero() {
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-white leading-tight mb-6">
           Hult Prize
           <br />
-          <span className="text-heritage">@ UCD</span>
+          <span className="text-heritage">Ireland</span>
         </h1>
 
         <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">

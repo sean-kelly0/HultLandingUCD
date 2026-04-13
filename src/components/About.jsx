@@ -36,7 +36,7 @@ export default function About() {
               <span className="font-bold text-hp-black">$1 million USD</span> is awarded.
             </p>
             <p>
-              The <span className="font-bold text-midnight">Irish Nationals at UCD</span> is your
+              The <span className="font-bold text-midnight">Hult Prize Ireland Nationals</span> is your
               gateway: bring your team, your idea, and your drive — and compete to represent Ireland on
               the global stage.
             </p>

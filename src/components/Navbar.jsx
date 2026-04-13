@@ -24,12 +24,11 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-        {/* Campus lockup: logo | University College Dublin */}
+        {/* Brand lockup: logo | Ireland */}
         <a href="#hero" className="flex items-center gap-3">
           <img src={hultLogo} alt="Hult Prize" className="h-8 w-auto" />
           <span className="text-white/30 font-light text-lg">|</span>
-          <span className="font-semibold text-white/80 text-sm hidden sm:inline">University College Dublin</span>
-          <span className="font-semibold text-white/80 text-sm sm:hidden">UCD</span>
+          <span className="font-semibold text-white/80 text-sm">Ireland</span>
         </a>
 
         {/* Desktop links */}

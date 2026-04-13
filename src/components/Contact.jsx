@@ -40,7 +40,7 @@ export default function Contact() {
             </h2>
             <p className="mt-5 text-white/60 leading-relaxed font-light">
               Whether you're pitching your idea after your local competition or
-              cheering on friends, everyone is welcome at the Hult Prize Irish Nationals at UCD.
+              cheering on friends, everyone is welcome at the Hult Prize Ireland Nationals.
             </p>
 
             <div className="mt-10 space-y-5">
