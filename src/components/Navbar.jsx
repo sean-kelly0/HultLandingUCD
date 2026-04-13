@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
+import { useLocation, Link } from 'react-router-dom'
 import hultLogo from '../assets/Hult Logo White Transparent.png'
 
-const navLinks = [
+const homeLinks = [
   { label: 'About', href: '#about' },
   { label: 'Sponsors', href: '#sponsors' },
   { label: 'Contact', href: '#contact' },
@@ -10,6 +11,8 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
+  const isGallery = location.pathname === '/gallery'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -20,20 +23,20 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-midnight shadow-lg' : 'bg-transparent'
+        scrolled || isGallery ? 'bg-midnight shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Brand lockup: logo | Ireland */}
-        <a href="#hero" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3">
           <img src={hultLogo} alt="Hult Prize" className="h-8 w-auto" />
           <span className="text-white/30 font-light text-lg">|</span>
           <span className="font-semibold text-white/80 text-sm">Ireland</span>
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {!isGallery && homeLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
@@ -44,13 +47,25 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a
-              href="#contact"
-              className="bg-heritage hover:bg-heritage-dark text-white font-bold text-sm px-5 py-2 rounded-full transition-colors"
+            <Link
+              to="/gallery"
+              className={`text-sm font-semibold transition-colors ${
+                isGallery ? 'text-heritage' : 'text-white/75 hover:text-white'
+              }`}
             >
-              Register Interest
-            </a>
+              Gallery
+            </Link>
           </li>
+          {!isGallery && (
+            <li>
+              <a
+                href="#contact"
+                className="bg-heritage hover:bg-heritage-dark text-white font-bold text-sm px-5 py-2 rounded-full transition-colors"
+              >
+                Register Interest
+              </a>
+            </li>
+          )}
         </ul>
 
         {/* Mobile hamburger */}
@@ -69,7 +84,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-midnight px-6 pb-5 flex flex-col gap-4">
-          {navLinks.map((link) => (
+          {!isGallery && homeLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -79,13 +94,24 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            className="bg-heritage hover:bg-heritage-dark text-white font-bold text-sm px-5 py-2.5 rounded-full text-center transition-colors"
+          <Link
+            to="/gallery"
+            className={`font-semibold transition-colors ${
+              isGallery ? 'text-heritage' : 'text-white/80 hover:text-white'
+            }`}
             onClick={() => setMenuOpen(false)}
           >
-            Register Interest
-          </a>
+            Gallery
+          </Link>
+          {!isGallery && (
+            <a
+              href="#contact"
+              className="bg-heritage hover:bg-heritage-dark text-white font-bold text-sm px-5 py-2.5 rounded-full text-center transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              Register Interest
+            </a>
+          )}
         </div>
       )}
     </nav>
